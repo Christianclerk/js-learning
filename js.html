@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pro{
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body><div class="pro">
+    <button onclick="document.getElementById('image').src='bulbon.gif'">turn on</button>
+    <img id="image" src="bulboff.gif" width="100px">
+    <button onclick="document.getElementById('image').src='bulboff.gif'">turn off</button>
+</div>
+<script>
+    function validateform(){
+        let x=document.forms['myform']['first'].value;
+        if(x==""){
+            alert("name must be filled");
+            return false;
+        }
+    }
+</script>
+<form name="myform" onsubmit="return validateform() " method="post">
+<input type="text" name="first">
+<button>submit</button>
+</form>
+</body>
+</html>
